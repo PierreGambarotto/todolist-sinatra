@@ -1,0 +1,26 @@
+<div class="hero-unit">
+  <h1>TODO : La liste !</h1>
+  <p>listez ce qu'il vous faut faire</p>
+</div>
+
+<div class="row">
+  <div class="span4 offset4">
+  <ul class="todolist unstyled">
+    <% @todos.each do |todo| %>
+      <li class="todoitem">
+        
+        <form action="/todos/<%= todo.id%>" method="POST">
+          <input type="hidden" name="_method" value="DELETE" />
+          <button class="btn btn-danger btn-mini" type="submit"><i class="icon-minus-sign"></i></button>
+          <%= todo.name%>
+        </form>
+      </li>
+    <% end%>
+  </ul>
+
+  <form action="/todos" class="form-inline" method="POST">
+    <button type="submit" class="btn btn-success btn-mini" name="submit"><i class="icon-plus-sign"></i></button>
+    <input name="todo[name]" type="text" placeholder="Nouveau TODO"/>
+  </form>
+</div>
+</div>
