@@ -12,7 +12,7 @@ La base de données s'utilise par inclusion de `db/database.rb`.
 
 ## Vues
 
-Les vues utilisent sont dans le répertoire `views` et sont en erb.
+Les vues sont dans le répertoire `views` et sont en erb.
 
 ## Tests
 
